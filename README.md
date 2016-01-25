@@ -1,2 +1,3 @@
-# merchants_api
-Public documentation for Merchants APIs
+# Merchants API
+
+[Commercial Rating](/sections/commercial-rating.md)
