@@ -296,4 +296,5 @@ General errors produce an HTTP status of `500` and look like this (provided the 
 ````
 
 ### Changelog
+
 - 2017-10-06 - Updated obligations example with results including bond_amounts and term_length
