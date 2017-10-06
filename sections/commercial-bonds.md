@@ -10,6 +10,7 @@
 * [Obligations](#obligations)
 * [Vaidating and Order](#validating-an-order)
 * [Effective Date State Validations](#effective-date-state-validations)
+* [Change Log](#change-log)
 
 ### High level
 Use the obligations endpoint to retrieve two key pieces of information:
@@ -293,3 +294,6 @@ General errors produce an HTTP status of `500` and look like this (provided the 
     days_before: 60
      days_after: 60
 ````
+
+#### Changelog
+- 2017-10-06 - Updated obligations example with results including bond_amounts and term_length
