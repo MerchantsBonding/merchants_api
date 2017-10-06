@@ -47,7 +47,7 @@ Here's an example of including an HTTP header using `curl`.
 curl -H API_KEY:123456 "https://hub.mbctestweb.com/api/v4/...
 ```
 
-#### Obligations
+### Obligations
 
 Obligations are how we determine the correct form to use for the order.
 
@@ -86,7 +86,7 @@ returns an HTTP status of `200` and the following upon success:
 {    
 ````
 
-#### Validating an Order
+### Validating an Order
 
 Submit a POST request to `/api/v4/orders/validate`.  For questions about valid parameter values, contact us at support@merchantsbonding.com.
 
@@ -168,7 +168,7 @@ General errors produce an HTTP status of `500` and look like this (provided the 
 }
 ````
 
-#### Effective Date State Validations
+### Effective Date State Validations
 ````
   AL
     days_before: 40
@@ -295,5 +295,5 @@ General errors produce an HTTP status of `500` and look like this (provided the 
      days_after: 60
 ````
 
-#### Changelog
+### Changelog
 - 2017-10-06 - Updated obligations example with results including bond_amounts and term_length
