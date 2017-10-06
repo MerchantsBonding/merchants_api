@@ -66,24 +66,38 @@ returns an HTTP status of `200` and the following upon success:
       {
         "id":136880,
         "state":"TX",
-        "name":"PRE-EXECUTED $10,000 Notary Public Bond"
-        ,"license_plate":"PNOTR"
+        "name":"PRE-EXECUTED $10,000 Notary Public Bond",
+        "license_plate":"PNOTR",
+        "bond_amounts":[10000],
+        "term_length":4
       },
       {
         "id":118489,
         "state":"AL",
         "name":"$25,000 Notary Public Bond",
-        "license_plate":"PNOTR"
+        "license_plate":"PNOTR",
+        "bond_amounts":[25000],
+        "term_length":4
       },
       (content removed for brevity)
+      {
+        "id":136267,
+        "state":"MN",
+        "name":"$10,000 Notary Public Errors \u0026 Omissions Policy",
+        "license_plate":"PNEO",
+        "bond_amounts":[10000],
+        "term_length":5
+      },
       {
         "id":140334,
         "state":"CA",
         "name":"Notary Public Errors \u0026 Omissions Policy",
-        "license_plate":"PNEO"
+        "license_plate":"PNEO",
+        "bond_amounts":[1000,3000,5000,10000,15000,20000,25000,30000,35000,50000,75000,100000],
+        "term_length":4
       }
     ]
-{    
+  }    
 ````
 
 ### Validating an Order
