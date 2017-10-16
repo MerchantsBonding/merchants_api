@@ -105,9 +105,10 @@ returns an HTTP status of `200` and the following upon success:
 Submit a POST request to `/api/v4/orders/validate`.  For questions about valid parameter values, contact us at support@merchantsbonding.com.
 
     license_plate    :: required; a string containing the "license plate", e.g. PNEOG (obtained from obligations end point)
+    obligation_id    :: required; a number identifying the obligation to be used (obtained from obligations endpoint)
     obligee_name     :: optional; a string containing an obligee name (for obligee-specific premiums) 
     bond_amount      :: required; a number representing the bond amount in dollars and cents.
-    
+   
     
     principal        :: required; a key containing principal related params
       name     :: required; a string containing a name
@@ -115,7 +116,8 @@ Submit a POST request to `/api/v4/orders/validate`.  For questions about valid p
       city     :: required; a string containing the city
       state    :: required; one of the 51 US state codes
       zip      :: required; a string containing the ZIP
-    effective_date   :: required; the effective date of the bond formatted yyyy-mm-dd
+    effective_date   :: required; the effective date of the bond, formatted yyyy-mm-dd
+    expiration_date  :: required; the expiration date of the bond, formatted yyyy-mm-dd
     attorney_in_fact :: required; a string containing a name
     producer_name    :: required; a string containing a name
     state            :: required; one of the 51 US state codes
@@ -128,9 +130,15 @@ Current validations:
     * state must be present
     * zip must be present
   * dates
-    * effective date must be present
-    * effective date must be in ISO 8601 format (YYYY-MM-DD)
-    * [effective date must be within range defined by state](#effective-date-state-validations)
+    * effective date 
+      * must be present
+      * must be in ISO 8601 format (YYYY-MM-DD)
+      * [must be within range defined by state](#effective-date-state-validations)
+    * expiration_date
+      * must be present
+      * must be in ISO 8601 format (YYYY-MM-DD)
+      * [must be within range defined by state](#effective-date-state-validations)
+      * must have year equivalent to effective date's year plus the term length specified by the obligation
   * other
     * attorney in fact must be present
     * producer name must be present
