@@ -8,7 +8,7 @@
 * [Using the API](#using-the-api)
 * [API Key](#api-key)
 * [Obligations](#obligations)
-* [Vaidating and Order](#validating-an-order)
+* [Validating an Order](#validating-an-order)
 * [Effective Date State Validations](#effective-date-state-validations)
 * [Change Log](#change-log)
 
